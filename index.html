@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="errorOverlay">
+            <div class="subErrorOverlay" id="Lost">
+                <div style="font-size:30px;font-weight:bold">You Loose !!!</div>
+                <img style="display:inline-block;" src="sad.png" alt="">
+                <button onclick="location.reload()" id="playAgainButton">PLAY AGAIN</button>
+            </div>
+            <div class="subErrorOverlay" id="Won">
+                <div style="font-size:20px;font-weight:bold">You WON !!!</div>
+                <img style="display:inline-block;" src="happy.png" alt="">
+                <div style="font-weight:bold;display:flex;align-items:center; gap:5px;">Total Mistakes: <span style="font-size:30px" class="totalMistakes">0</span></div>
+                <button onclick="location.reload()" id="playAgainButton">PLAY AGAIN</button>
+            </div>
+        </div>
+        <div class="wrapperLeft">
+            <div class="subWrapperLeft">
+                <div class="div1"></div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+                <div class="div4"></div>
+                <div class="div5"></div>
+                <div class="head hangman"><img id="sadFace" src="sad2.png" alt=""></div>
+                <div class="body hangman"></div>
+                <div class="lHand hangman"></div>
+                <div class="rHand hangman"></div>
+                <div class="lFoot hangman"></div>
+                <div class="rFoot hangman"></div>
+            </div>
+        </div>
+        <div class="wrapperRight">
+            <form id="options" action="">
+                <label for="Categories">Choose a Category to play:</label>
+                <select name="Categories" id="Categories">
+                    <option value="WildAnimals">Wild Animals</option>
+                    <option value="Rivers">Rivers</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="IndianCities">Indian Cities</option>
+                    <option value="Capitals">Capitals</option>
+                </select>
+            </form>
+            <div class="buttons">
+                <button onclick="play()">Play</button>
+                <button onclick="location.reload()">Restart</button>
+            </div>
+            <div>
+                <div class="displayDivs"></div>
+                <div class="display"></div>
+            </div>
+            <div class="infos">
+                <div style="display:flex;gap:8px;align-items:center;font-size:20px;font-weight:bold" class="displayMistake"><span style="color:rgba(255, 0, 0, 0.885)" >INCORRECT</span> <div style="font-size:30px" class="mistake">0</div> <span>/ 6</span></div>
+                <div style="color:rgba(0, 0, 255, 0.761);font-size:20px;font-weight:bold;display:flex;align-items:center; gap:8px">LEVEL <span style="color:black;font-size:30px" class="levelIndicator">0</span></div>
+            </div>
+            <form class="keyboard">
+                <div class="wht">A</div>
+                <div class="wht">B</div>
+                <div class="wht">C</div>
+                <div class="wht">D</div>
+                <div class="wht">E</div>
+                <div class="wht">F</div>
+                <div class="wht">G</div>
+                <div class="wht">H</div>
+                <div class="wht">I</div>
+                <div class="wht">J</div>
+                <div class="wht">K</div>
+                <div class="wht">L</div>
+                <div class="wht">M</div>
+                <div class="wht">N</div>
+                <div class="wht">O</div>
+                <div class="wht">P</div>
+                <div class="wht">Q</div>
+                <div class="wht">R</div>
+                <div class="wht">S</div>
+                <div class="wht">T</div>
+                <div class="wht">U</div>
+                <div class="wht">V</div>
+                <div class="wht">W</div>
+                <div class="wht">X</div>
+                <div class="wht">Y</div>
+                <div class="wht">Z</div>
+            </form>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
